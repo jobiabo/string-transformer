@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Transformer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        h2 {
+            color: #333;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #007BFF;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>String Transformer</h2>
+
+    <form method="POST">
+        <input type="text" name="text" placeholder="Enter text" required />
+        <br><br>
+        <select name="action">
+            <option value="upper">Upper</option>
+            <option value="lower">Lower</option>
+            <option value="cap">Capitalize</option>
+            <option value="snake">Snake</option>
+            <option value="reverse">Reverse</option>
+            <option value="title">Title</option>
+        </select>
+        <br><br>
+        <button type="submit">Transform</button>
+    </form>
+
+    <!-- Show result if available -->
+    {{if .Result}}
+        <div class="result">Result: {{.Result}}</div>
+    {{end}}
+</body>
+</html>
