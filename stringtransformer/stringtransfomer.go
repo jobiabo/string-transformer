@@ -13,7 +13,7 @@ func Transform(action string, words []string) string {
 	case "cap":
 		return CapFirstLetter(words)
 	case "snake":
-		return Snake(words)
+		return strings.ToLower(Snake(words))
 	case "reverse":
 		return Reverse(words)
 	case "title":
